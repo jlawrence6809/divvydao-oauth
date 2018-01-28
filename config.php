@@ -17,7 +17,7 @@ function config($key = '')
         ],
         'template_path' => 'template',
         'content_path' => 'content',
-        'pretty_uri' => true,
+        'pretty_uri' => false,
         'version' => 'v2.0',
         'root' => 'diglife/leagueOauth',
     ];
