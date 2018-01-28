@@ -1,8 +1,8 @@
 <?php
 $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => 'oo4fwn9enfyy8r6h1arf7x8aww',
-    'clientSecret'            => 'add secret here',
-    'redirectUri'             => 'http://5bab9dec.ngrok.io/authorize',
+    'clientSecret'            => 'ahhnnmd5cjyr8pnz817mdy6yqy',
+    'redirectUri'             => 'http://divvydao.org/diglife/leagueOauth/authorize',
     'urlAuthorize'            => 'https://chat.divvydao.net/oauth/authorize',
     'urlAccessToken'          => 'https://chat.divvydao.net/oauth/access_token',
     'urlResourceOwnerDetails' => 'https://chat.divvydao.net/api/v4/users/me'
@@ -14,7 +14,7 @@ function getProvider(){
 }
 
 function isAuthed(){
-    if($_SESSION['accessToken']){
+    if(isset($_SESSION['accessToken'])){
         return true;
     } 
     return false;
@@ -54,7 +54,7 @@ function navMenu($sep = ' | ')
     $nav_menu = '';
 
     foreach (config('nav_menu') as $uri => $name) {
-        $nav_menu .= '<a href="/'.(config('pretty_uri') || $uri == '' ? '' : '?page=').$uri.'">'.$name.'</a>'.$sep;
+        $nav_menu .= '<a href="/'.config('root').'/'.(config('pretty_uri') || $uri == '' ? '' : '?page=').$uri.'">'.$name.'</a>'.$sep;
     }
 
     echo trim($nav_menu, $sep);
@@ -77,8 +77,9 @@ function currentPage()
     if(isset($_GET['page'])){
         return $_GET['page'];
     }
+    print($_SERVER['REQUEST_URI']);
     if(config('pretty_uri')){
-        $req_uri = explode("?", explode("/", $_SERVER['REQUEST_URI'])[1])[0];
+        $req_uri = explode("?", explode("/", $_SERVER['REQUEST_URI'])[3])[0];
         if(strlen($req_uri) > 0){
             return $req_uri;
         }

@@ -19,6 +19,7 @@ function config($key = '')
         'content_path' => 'content',
         'pretty_uri' => true,
         'version' => 'v2.0',
+        'root' => 'diglife/leagueOauth',
     ];
 
     return isset($config[$key]) ? $config[$key] : null;
