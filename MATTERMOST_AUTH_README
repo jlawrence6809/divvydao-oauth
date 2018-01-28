@@ -1,0 +1,11 @@
+Run stopped mattermost:
+docker run -it -d -p 8065:8065 mattermost/mattermost-preview
+
+php logs:
+cat /Applications/MAMP/logs/php_error.log
+
+install any composer libraries needed:
+composer install
+
+
+to get it working I had to:
