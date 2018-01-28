@@ -2,7 +2,7 @@
 $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => 'oo4fwn9enfyy8r6h1arf7x8aww',
     'clientSecret'            => 'ahhnnmd5cjyr8pnz817mdy6yqy',
-    'redirectUri'             => 'http://divvydao.org/diglife/leagueOauth/authorize',
+    'redirectUri'             => 'http://divvydao.org/diglife/divvydao-oauth/?page=authorize',
     'urlAuthorize'            => 'https://chat.divvydao.net/oauth/authorize',
     'urlAccessToken'          => 'https://chat.divvydao.net/oauth/access_token',
     'urlResourceOwnerDetails' => 'https://chat.divvydao.net/api/v4/users/me'
