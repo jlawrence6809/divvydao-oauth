@@ -7,7 +7,7 @@ require_once 'functions.php';
 ini_set('display_errors', 'On');
 session_start();
 
-print('reaching index.php\n');
+print('reaching index.php');
 print('current page: '.currentPage());
 
 if(currentPage() == 'home'){
