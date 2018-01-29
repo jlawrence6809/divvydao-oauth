@@ -10,12 +10,8 @@ session_start();
 print('reaching index.php');
 print('current page: '.currentPage());
 
-if(currentPage() == 'home'){
-    run();
+if(currentPage() == 'authorize' || isset($_GET['code'])){
+	pageContent();
+}else{
+	run();
 }
-
-// if(currentPage() == 'authorize'){
-// 	pageContent();
-// }else{
-// 	run();
-// }
