@@ -7,11 +7,9 @@ require_once 'functions.php';
 ini_set('display_errors', 'On');
 session_start();
 
-print('reaching index.php');
-print('current page: '.currentPage());
+print('token: '.$_SESSION['accessToken']);
 
 if(currentPage() == 'authorize' || isset($_GET['code'])){
-    print('code is set');
 	pageContent('authorize');
 }else{
 	run();
