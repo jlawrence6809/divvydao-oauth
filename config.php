@@ -17,7 +17,7 @@ function config($key = '')
         ],
         'template_path' => 'template',
         'content_path' => 'content',
-        'pretty_uri' => false,
+        'pretty_uri' => true,
         'version' => 'v2.0',
         'root' => 'diglife/divvydao-oauth',
     ];
