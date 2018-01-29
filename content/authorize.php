@@ -47,4 +47,5 @@ if(!$_SESSION['accessToken']){
 	}
 } else {
 	print('already authorized');
+	header('Location: '.'/'.config('root'));
 }
