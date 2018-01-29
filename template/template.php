@@ -20,7 +20,7 @@
 
     <article>
         <h3><?php pageTitle(); ?></h3>
-        <?php pageContent(); ?>
+        <?php pageContent(currentPage()); ?>
     </article>
 
     <footer><small>&copy;<?php echo date('Y'); ?> <?php siteName(); ?>.<br><?php siteVersion(); ?></small></footer>

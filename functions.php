@@ -92,9 +92,8 @@ function currentPage()
  * the static pages inside the pages/ directory.
  * When not found, display the 404 error page.
  */
-function pageContent()
+function pageContent($page)
 {
-    $page = currentPage();
     $path = config('content_path').'/'.$page.'.php';
     if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
         include $path;
