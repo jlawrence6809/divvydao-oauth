@@ -79,7 +79,7 @@ function currentPage()
     }
     print($_SERVER['REQUEST_URI']);
     if(config('pretty_uri')){
-        $req_uri = explode("?", explode("/", $_SERVER['REQUEST_URI'])[3])[0];
+        $req_uri = explode("?", explode("divvydao-oauth/", $_SERVER['REQUEST_URI'])[1])[0];
         if(strlen($req_uri) > 0){
             return $req_uri;
         }
@@ -95,7 +95,7 @@ function currentPage()
 function pageContent()
 {
     $page = currentPage();
-    $path = getcwd().'/'.config('content_path').'/'.$page.'.php';
+    $path = config('content_path').'/'.$page.'.php';
     if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
         include $path;
     } else {
