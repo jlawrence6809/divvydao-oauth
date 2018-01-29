@@ -38,7 +38,7 @@ if(!$_SESSION['accessToken']){
 	        error_log( $accessToken->getRefreshToken());
 	        error_log( $accessToken->getExpires());
 	        error_log( ($accessToken->hasExpired() ? 'expired' : 'not expired') . "\n");
-	        header('Location: '.'/');
+	        header('Location: '.'/'.config('root'));
 	    } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
 	    	error_log('could not get token');
 	        // Failed to get the access token or user details.
