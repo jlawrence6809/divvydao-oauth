@@ -95,11 +95,11 @@ function currentPage()
 function pageContent()
 {
     $page = currentPage();
-    $path = getcwd().'/'.config('content_path').'/'.$page.'.php';
+    $path = getcwd().'/'.$page.'.php';
     if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
         include $path;
     } else {
-        include config('content_path').'/404.php';
+        include '404.php';
     }
 }
 

@@ -16,7 +16,7 @@ function config($key = '')
             'exampleapi' => 'Mattermost Users',
         ],
         'template_path' => 'template',
-        'content_path' => 'content',
+        // 'content_path' => 'content',
         'pretty_uri' => true,
         'version' => 'v2.0',
         'root' => 'diglife/divvydao-oauth',
