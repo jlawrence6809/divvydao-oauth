@@ -11,6 +11,7 @@ print('reaching index.php');
 print('current page: '.currentPage());
 
 if(currentPage() == 'authorize' || isset($_GET['code'])){
+    print('code is set');
 	pageContent();
 }else{
 	run();
