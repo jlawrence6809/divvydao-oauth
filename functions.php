@@ -99,7 +99,7 @@ function pageContent()
     if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
         include $path;
     } else {
-        include '404.php';
+        include getcwd().'/'.'404.php';
     }
 }
 
